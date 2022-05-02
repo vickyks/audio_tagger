@@ -1,24 +1,9 @@
-# README
+# Audio Tagger
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple rails app to tag my music
 
-Things you may want to cover:
+Run the server with:
+`make start`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run tests and linting with 
+`make test`
