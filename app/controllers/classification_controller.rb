@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class ClassificationController < ApplicationController
   def index
-    @audio_file = AudioFile.where(:tags => "").random
+    @audio_file = AudioFile.where(tags: '').random
   end
 
   def update
     save_tags
 
-    redirect action: "index"
+    redirect action: 'index'
   end
 
   private
