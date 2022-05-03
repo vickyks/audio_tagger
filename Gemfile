@@ -9,6 +9,7 @@ gem 'acts-as-taggable-on', '~> 9.0'
 gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'jbuilder'
+gem 'pg', '1.3.5'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.4'
 gem 'sassc-rails'
