@@ -1,4 +1,7 @@
 RUN_ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
+include .env
+
+export $(shell sed 's/=.*//' .env)
 
 start:
 	rails server ${RUN_ARGS}
