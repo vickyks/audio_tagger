@@ -36,3 +36,7 @@
 
 # Ignore swap files
 *.sw[a-z]
+
+# Ignore env files
+.env
+.env_*
