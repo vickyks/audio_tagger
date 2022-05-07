@@ -3,8 +3,14 @@ include .env
 
 export $(shell sed 's/=.*//' .env)
 
+.ONESHELL:
 start:
-	rails server ${RUN_ARGS}
+	rails server -p 8000
+
+.ONESHELL:
+migrate:
+	rails db:migrate RAILS_ENV=development
+
 
 .ONESHELL:
 test:
@@ -13,4 +19,4 @@ test:
 	bundle exec rubocop
 	bundle exec strong_versions
 
-.PHONY: start test
+.PHONY: start test migrate

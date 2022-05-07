@@ -7,6 +7,7 @@ ruby '2.7.5'
 
 gem 'acts-as-taggable-on', '~> 9.0'
 gem 'bootsnap', '~> 1.11'
+gem 'dotenv'
 gem 'importmap-rails', '~> 1.0'
 gem 'jbuilder', '~> 2.11'
 gem 'pg', '~> 1.3'

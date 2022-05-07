@@ -5,10 +5,11 @@ default: &default
 
 development:
   adapter: postgresql
-  database: ENV['DB_DATABASE']
-  host: ENV['DB_HOST']
-  port: ENV['DB_PORT']
-  password: ENV['DB_PASSWORD']
+  user:  <%= ENV.fetch('DB_USER') %>
+  database: <%= ENV.fetch('DB_DATABASE') %>
+  host: <%= ENV.fetch('DB_HOST') %>
+  port: <%= ENV.fetch('DB_PORT') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
 
 test:
   <<: *default
@@ -16,7 +17,7 @@ test:
 
 production:
   adapter: postgresql
-  database: ENV['DB_DATABASE']
-  host: ENV['DB_HOST']
-  port: ENV['DB_PORT']
-  password: ENV['DB_PASSWORD']
+  database: <%= ENV.fetch('DB_DATABASE') %>
+  host: <%= ENV.fetch('DB_HOST') %>
+  port: <%= ENV.fetch('DB_PORT') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
