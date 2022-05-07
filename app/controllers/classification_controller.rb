@@ -2,7 +2,11 @@
 
 class ClassificationController < ApplicationController
   def index
-    @audio_file = AudioFile.where(tags: '').random
+    @audio_file = AudioFile.random
+  end
+
+  def edit
+    @audio_files = AudioFile.find(params[:id])
   end
 
   def update

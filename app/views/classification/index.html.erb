@@ -1,2 +1,8 @@
 <h1>Classification#index</h1>
-<p>Find me in app/views/classification/index.html.erb</p>
+<div>
+<p>Tagging file: <% @audio_file.file_path %> </p>
+
+<% form_for :audio_file do |f| %>
+  <%= f.text_field :tags %>
+<% end %>
+
