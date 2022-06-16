@@ -1,8 +1,11 @@
-<h1>Classification#index</h1>
-<div>
-<p>Tagging file: <% @audio_file.file_path %> </p>
+<% if @audio_file.present? %>
+  <div>
+    <h2>Tagging file: <% @audio_file.file_path %> </h2>
 
-<% form_for :audio_file do |f| %>
-  <%= f.text_field :tags %>
+    <% form_for :audio_file do |f| %>
+      <%= f.text_field :tags %>
+    <% end %>
+  </div>
+<% else %>
+  <h1> No Audio files, please upload one</h1>
 <% end %>
-

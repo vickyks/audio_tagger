@@ -3,8 +3,8 @@
 class AudioFile < ApplicationRecord
   acts_as_taggable_on :tags
 
-  def file_path
-    Pathname.join(asset_root, self.filename)
+  def self.file_path
+    Pathname.join(asset_root, filename)
   end
 
   def asset_root
